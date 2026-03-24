@@ -1,0 +1,55 @@
+{
+  "name": "@guivueba/skills-mcp",
+  "version": "1.0.0",
+  "description": "GUIVueBA 飯店管理系統 Skills MCP Server - 提供頁面檢查、資料字典、API 架構等專業工具",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "guivueba-skills": "dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "prepack": "npm run build",
+    "postinstall": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "guivueba",
+    "hotel-management",
+    "cursor",
+    "cursor-ide"
+  ],
+  "author": "GUIVueBA Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xx455157/guivueba-skills-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xx455157/guivueba-skills-mcp/issues"
+  },
+  "homepage": "https://github.com/xx455157/guivueba-skills-mcp#readme",
+  "peerDependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
