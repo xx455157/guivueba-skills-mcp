@@ -137,7 +137,7 @@ npm install -g @guivueba/skills-mcp
 
 ```bash
 # 克隆專案
-git clone https://github.com/YOUR_USERNAME/guivueba-skills-mcp.git
+git clone https://github.com/xx455157/guivueba-skills-mcp.git
 cd guivueba-skills-mcp
 
 # 安裝依賴
