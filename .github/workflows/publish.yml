@@ -8,6 +8,14 @@ on:
       - 'v*'
   workflow_dispatch:
 
+# 設定 NPM_TOKEN 說明：
+# 1. 前往 https://www.npmjs.com/settings/xx455157/tokens
+# 2. 點擊 "Generate New Token" > "Classic Token"
+# 3. 選擇 "Publish" 類型，設定名稱為 "GitHub Actions"
+# 4. 複製產生的 token
+# 5. 在 GitHub repository 設定：Settings > Secrets and variables > Actions > New repository secret
+# 6. 名稱設為 NPM_TOKEN，值貼上步驟 4 的 token
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -18,7 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install dependencies
         run: npm ci
