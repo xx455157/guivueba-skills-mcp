@@ -14,7 +14,7 @@ export class CheckVQLayoutTool implements Tool {
   [key: string]: any;
   name = "check-vqpattern-page";
   description =
-    "檢查指定網頁是否符合 GUIVueBA 專案的 vQPattern 標準頁面結構與畫面規範。當使用者要求：(1) 檢查某個網頁是否符合 vQPattern 標準，(2) 比對某個頁面與 vQPattern 的差異，(3) 確認某頁面是否能照另一個頁面改，(4) 檢查頁面是否遵循標準 Pattern 規範時使用此工具。";
+    "檢查指定網頁是否符合 GUIVueBA 專案的 vQPattern 標準頁面結構與畫面規範，並以 DESIGN.md 作為視覺基準。當使用者要求：(1) 檢查某個網頁是否符合 vQPattern 標準，(2) 比對某個頁面與 vQPattern 的差異，(3) 確認某頁面是否能照另一個頁面改，(4) 檢查頁面是否遵循標準 Pattern 規範時使用此工具。";
   inputSchema = {
     type: "object",
     properties: {
@@ -112,6 +112,10 @@ function generateCheckReport(
   report += `## 📋 基本資訊\n`;
   report += `- **目標頁面**: ${targetPage}\n`;
   report += `- **檢查時間**: ${new Date().toLocaleString("zh-TW")}\n\n`;
+  report += `## 📚 比對基準\n`;
+  report += `- **結構基準**: Security/SP/MobilePTN/vQPattern.html\n`;
+  report += `- **視覺基準**: DESIGN.md\n`;
+  report += `- **規範文件**: docs/pattern/vqpattern/README.md\n\n`;
 
   report += `## ✅ 符合項目\n`;
   checks.forEach((check) => {

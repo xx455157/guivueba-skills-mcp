@@ -11,7 +11,7 @@ const PROJECT_ROOT = "D:/GUINet/WebRWD/GUIVueBA";
 export class ArchitectureGuideTool implements Tool {
   [key: string]: any;
   name = "get-architecture-guide";
-  description = "取得 GUIVueBA 前端開發樣式守衛規範。當需要了解前端樣式規範、檢查是否有 inline style 違規，或需要參考 Tailwind CSS 使用方式時使用此工具。";
+  description = "取得 GUIVueBA 前端開發樣式守衛規範與 DESIGN.md 視覺基準。當需要了解前端樣式規範、檢查是否有 inline style 違規，或需要參考 GUIVueBA 畫面風格時使用此工具。";
   inputSchema = {
     type: "object",
     properties: {
@@ -64,6 +64,14 @@ export class ArchitectureGuideTool implements Tool {
 
 function getStyleGuardGuide(): string {
   return `# 🎨 GUIVueBA 樣式守衛規範
+
+## 使用前先讀
+
+- 專案設計文件：\`D:/GUINet/WebRWD/GUIVueBA/DESIGN.md\`
+- 結構範例頁：\`D:/GUINet/WebRWD/GUIVueBA/Security/SP/MobilePTN/vQPattern.html\`
+
+\`DESIGN.md\` 定義 GUIVueBA 的視覺語言、按鈕語意色、header/filter/list/detail/dialog 呈現基準。
+本工具聚焦在樣式守衛與違規檢查。
 
 ## 核心強制規則
 
